@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overlay Fields on Image</title>
+<style>
+  .container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .overlay-field {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px; 
+    
+  }
+
+  .field-wrapper {
+    display: inline-block;
+  }
+
+  .field-wrapper label {
+    display: block; /* Label will be displayed as a block element, pushing the input below it */
+    margin-bottom: 8px;
+  }
+
+  #image {
+    width: 100%; /* Make the image take the full width of its container */
+    height: auto; /* Ensure aspect ratio is maintained */
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <img src="./swdev.powerappsportals.com_en-US_service_cases_create_.png" alt="Your Image" id="image">
+  <div class="overlay-field" style="top: 33%; left: 4%;">
+    <div class="field-wrapper">
+      <label for="field1">Field 1:</label>
+      <input type="text" id="field1">
+    </div>
+  </div>
+  <div class="overlay-field" style="top: 33%; left: 53%;">
+    <div class="field-wrapper">
+      <label for="field2">Field 2:</label>
+      <input type="text" id="field2">
+    </div>
+  </div>
+</div>
+
+<script>
+  // Add text to the input field using JavaScript
+  document.getElementById('field1').value = 'Initial Text for Field 1';
+  document.getElementById('field2').value = 'Initial Text for Field 2';
+</script>
+
+</body>
+</html>
